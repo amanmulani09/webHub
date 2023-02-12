@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box,CardContent,cardContent,CardMedia,Typography} from '@mui/material';
+import {Box,CardContent,CardMedia,Typography} from '@mui/material';
 import { CheckCircle } from '@mui/icons-material';
 import { demoProfilePicture } from '../utlis/constants';
 import {Link} from 'react-router-dom';
