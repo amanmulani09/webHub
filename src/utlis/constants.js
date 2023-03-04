@@ -10,11 +10,7 @@ export const categories = [
   { name: 'ReactJS', icon: <CodeIcon />, },
   { name: 'html', icon: <CodeIcon />, },
   { name: 'css', icon: <CodeIcon />, },
-  { name: 'nodejs', icon: <CodeIcon />, },
-  { name: 'typescript', icon: <CodeIcon />, },
-  { name: 'Angular', icon: <CodeIcon />, },
-  { name: 'web projects', icon: <CodeIcon />, },
-  { name: 'NextJS', icon: <CodeIcon />, },
+  { name: 'typescript', icon: <CodeIcon />, }
 ];
 
 export const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png';

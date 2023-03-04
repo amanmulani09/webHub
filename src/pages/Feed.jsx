@@ -3,6 +3,7 @@ import {Box,Stack,Typography} from '@mui/material'
 import Sidebar from '../components/Sidebar';
 import {Videos} from './index';
 import { fetchFromAPI } from '../utlis/fetchFromAPI';
+import LeftNav from '../components/LeftNav';
 const Feed = () => {
 const [selectedCategory,setSelectedCategory] = useState('Web Development')
 const [videos,setVideos] = useState([])
@@ -15,17 +16,17 @@ const [videos,setVideos] = useState([])
 
   return (
     
-    <Stack sx={{flexDirection:{sx: "column",md:"row"}}} >
-      <Box sx={{height:{sx:'auto',md:'92vh'},borderRight:'1px solid #3d3d3d', px:{sx:0, md:2}}}>
+    <Stack sx={{flexDirection:{sx: "column",md:"row"}, display:'block'}} >
+      <Box sx={{height:{sx:'auto',md:'9vh' },marginLeft:'150px',width:'90%',borderRight:'1px solid #3d3d3d', px:{sx:0, md:2}, display:'block'}}>
       <Sidebar 
       selectedCategory={selectedCategory}
       setSelectedCategory={setSelectedCategory}
       />
-      <Typography className='copyright' variant='body2' sx={{mt:1.5,color:'#fff'}}>
-        copyright 2023 @handleMouseDownPassword
-      </Typography>
+
       </Box>
-      <Box p={2} sx={{overflowY:'auto', height:'90vh', flex:2}}>
+      <div className='main-container' style={{display:'flex'}}>
+      <LeftNav />
+      <Box p={2} sx={{overflowY:'auto',  flex:2}}>
         <Typography variant='h4' fontWeight="bold" mb={2} sx={{
           color:'white'
         }}>
@@ -36,6 +37,8 @@ const [videos,setVideos] = useState([])
         <Videos videos={videos}/>
 
         </Box>
+      </div>
+  
     </Stack>
   ) 
 }

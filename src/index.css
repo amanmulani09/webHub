@@ -58,7 +58,7 @@ a {
   background: transparent;
   outline: none;
   border: none;
-
+width:fit-content;
   padding: 7px 15px;
   margin: 10px 0px;
   border-radius: 20px;
