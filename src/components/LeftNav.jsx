@@ -1,6 +1,4 @@
-import { display } from '@mui/system'
 import React from 'react'
-
 const leftNavStyle = {
 border:'2px solid white',
 width:'200px',
