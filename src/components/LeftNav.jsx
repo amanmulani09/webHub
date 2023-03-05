@@ -4,10 +4,7 @@ import React from 'react'
 const leftNavStyle = {
 border:'2px solid white',
 width:'200px',
-height:'300px',
-display:'flex',
-justifyContent:'center',
-alignItems:'center'
+height:'300px'
 }
 const LeftNav = () => {
   return (
@@ -17,7 +14,7 @@ const LeftNav = () => {
             }}
           >
                 <span style={{
-                    opacity: true ? '1' : '0.8'
+                    opacity: true ? '1' : '0.7'
                 }}>Liked Videos 👍</span>
             </button>
         <button className='category-btn' style={{
