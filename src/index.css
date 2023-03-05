@@ -74,6 +74,7 @@ width:fit-content;
 @media screen and (max-width:800px){
   .copyright{
     display:none !important;
+    
   }
 }
 
@@ -87,5 +88,8 @@ width:fit-content;
   }
   .search-bar{
     width:200px;
+    /* color:antiquewhite */
+    color:#f3fef3;
   }
 }
+

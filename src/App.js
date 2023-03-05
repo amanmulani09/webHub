@@ -2,10 +2,14 @@ import React from 'react'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import {Box} from '@mui/material';
 import { Navbar,Feed,ChannelDetail,SearchFeed,VideoDetail } from './pages';
+import { useGlobalContext } from './state/GlobalContext';
 const App = () => {
+  const {state} = useGlobalContext();
+  const darkmode = state.isDarkModeOn;
+
   return (
     <BrowserRouter>
-  <Box sx={{backgroundColor:'#000'}}>
+  <Box sx={{  backgroundColor: darkmode ?  'black' : 'white'}}>
     <Navbar />
 <Routes>
   <Route path="/" exact element={<Feed />} />
