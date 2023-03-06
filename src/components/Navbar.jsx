@@ -14,7 +14,7 @@ const Navbar = () => {
             background: state.isDarkModeOn ? 'black' : '#fff', top: 0, justifyContent: 'space-between'
         }}>
         <Link to="/" style={{display:'flex',alignItems:'center'}}>
-            <img src={logo} alt="Home logo" height={45}/>
+            <img src={logo} alt="Home Play Logo" height={45}/>
         </Link>
         <button style={{
             cursor:'pointer',
