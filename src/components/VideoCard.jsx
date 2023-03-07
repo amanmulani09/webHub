@@ -34,6 +34,8 @@ const VideoCard = ({video:{id:{
             <CheckCircle sx={{fontSize:12,color:'grey',ml:'5px'}} />
         </Typography>
         </Link>
+        <button>Like</button>
+        <button>Watch Later</button>
         </CardContent>
     </Card>
   )
