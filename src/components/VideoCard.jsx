@@ -14,8 +14,8 @@ const VideoCard = ({video:{id:{
         alt={snippet?.title}
         sx={{width:{
             xs:'100%',
-            sm:'358px',
-            md:'260px'
+            sm:'359px',
+            md:'261px'
         },height:'180px'}}
         />
         </Link>
