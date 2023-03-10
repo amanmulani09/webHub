@@ -20,7 +20,7 @@ const Navbar = () => {
             cursor:'pointer',
             position:'absolute',
             right:'36%',
-            transition:'all 0.5s ease-in-out',
+            transition:'all 0.4s ease-in-out',
             border:'none',
             background:'none'
         }} 
