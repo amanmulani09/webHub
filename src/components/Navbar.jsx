@@ -33,12 +33,7 @@ const Navbar = () => {
         }
         } 
         >
-            {state.isDarkModeOn ?<i class="fa-light fa-brightness" style={{
-                fontSize:'1.8rem',
-                color:'white'
-            }}></i> : <i class="fa-solid fa-moon" style={{
-                fontSize:'1.8rem',
-            }}></i>}
+        
              </button>
         <SearchBar />
         </Stack>

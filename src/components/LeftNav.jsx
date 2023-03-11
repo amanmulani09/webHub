@@ -1,8 +1,11 @@
 import React from 'react'
 const leftNavStyle = {
-border:'2px solid white',
-width:'200px',
-height:'300px'
+    /* border: 2px solid white; */
+    width: "200px",
+    height: '300px',
+    boxShadow: "-1px 0px 4px 0px #FC1503",
+    marginTop:'30px',
+    marginLeft:'10px'
 }
 const LeftNav = () => {
   return (
@@ -13,7 +16,7 @@ const LeftNav = () => {
           >
                 <span style={{
                     opacity: true ? '1' : '0.7'
-                }}>Liked Videos 👍</span>
+                }}>Watch Later ⏲️</span>
             </button>
         <button className='category-btn' style={{
                 background: true&& '#FC1503',color:'white', marginRight:'20px'
@@ -23,21 +26,21 @@ const LeftNav = () => {
                     opacity: true ? '1' : '0.8'
                 }}>Liked Videos 👍</span>
             </button>
+        {/* <button className='category-btn' style={{
+                background: true&& '#FC1503',color:'white', marginRight:'20px'
+            }}
+          >
+                <span style={{
+                    opacity: true ? '1' : '0.8'
+                }}></span>
+            </button> */}
         <button className='category-btn' style={{
                 background: true&& '#FC1503',color:'white', marginRight:'20px'
             }}
           >
                 <span style={{
                     opacity: true ? '1' : '0.8'
-                }}>Liked Videos 👍</span>
-            </button>
-        <button className='category-btn' style={{
-                background: true&& '#FC1503',color:'white', marginRight:'20px'
-            }}
-          >
-                <span style={{
-                    opacity: true ? '1' : '0.8'
-                }}>Liked Videos 👍</span>
+                }}>Playlists 🖆 </span>
             </button>
     </div>
   )
