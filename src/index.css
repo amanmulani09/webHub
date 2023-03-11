@@ -93,3 +93,8 @@ width:fit-content;
   }
 }
 
+
+.btn:hover{
+background: white;
+color:#FC1503
+}

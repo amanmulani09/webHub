@@ -8,7 +8,7 @@ const VideoCard = ({video:{id:{
 }, snippet}}) => {
     console.log(videoId,snippet)
   return (
-    <Card sx={{width:{  xs:'100%',sm:'321px', md:'260px'},boxShadow:'none', borderRadius:'0'}}>
+    <Card sx={{width:{  xs:'100%',sm:'331px', md:'260px'},boxShadow:'none', borderRadius:'0'}}>
         <Link to={videoId ?`/video/${videoId}` : demoVideoUrl  }>
         <CardMedia  image={snippet?.thumbnails?.high?.url}
         alt={snippet?.title}
@@ -34,8 +34,28 @@ const VideoCard = ({video:{id:{
             <CheckCircle sx={{fontSize:12,color:'grey',ml:'5px'}} />
         </Typography>
         </Link>
-        <button>Like</button>
-        <button>Watch Later</button>
+        <button className='btn' style={{
+            padding:'5px',
+            paddingRight:'15px',
+            marginRight:'10px',
+            border:'1px solid #FC1503',
+            background:'none',
+            textAlign:'center',
+            color:'white',
+            borderRadius:'4px',
+            cursor:'pointer'
+        }}>Like</button>
+        <button className='btn' style={{
+            padding:'5px',
+            paddingRight:'15px',
+            marginRight:'10px',
+            border:'1px solid #FC1503',
+            background:'none',
+            textAlign:'center',
+            color:'white',
+            borderRadius:'4px',
+            cursor:'pointer'
+        }}>Watch Later</button>
         </CardContent>
     </Card>
   )
