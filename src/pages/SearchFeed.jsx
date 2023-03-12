@@ -12,7 +12,7 @@ const {searchTerm} = useParams();
         setVideos(data.items)
       })
   },[searchTerm])
-  console.log(videos)
+  // console.log(videos)
 
   return (
     

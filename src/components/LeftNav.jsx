@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import React from 'react'
 const leftNavStyle = {
     /* border: 2px solid white; */
@@ -24,7 +25,7 @@ const LeftNav = () => {
           >
                 <span style={{
                     opacity: true ? '1' : '0.8'
-                }}>Liked Videos 👍</span>
+                }}> <Link to="/likedvideos">Liked Videos 👍</Link> </span>
             </button>
         {/* <button className='category-btn' style={{
                 background: true&& '#FC1503',color:'white', marginRight:'20px'

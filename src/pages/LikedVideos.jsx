@@ -2,15 +2,19 @@ import React from 'react'
 import {Stack,Box} from '@mui/material'
 import ChannelCard from '../components/ChannelCard'
 import VideoCard from '../components/VideoCard'
-const Videos = ({videos,direction}) => {
-  // console.log(videos)
-  if(!videos) return 'Loading....'
+import { useGlobalContext } from '../state/GlobalContext'
+const LikedVideos = () => {
+    const {state} = useGlobalContext();
+    const {likedVideos} = state
+
+  console.log(likedVideos)
+  if(!likedVideos) return 'Loading....'
   return (
     <Stack
-    direction={direction || 'row'}
+    direction={'row'}
      flexWrap="wrap"
      justifyContent="start" gap={2}> 
-    {videos.map((item,idx)=>{
+    {likedVideos.map((item,idx)=>{
 return(
     <Box key={idx}>
       {item.id.videoId && <VideoCard video={item} />}
@@ -22,4 +26,4 @@ return(
   )
 }
 
-export default Videos
+export default LikedVideos

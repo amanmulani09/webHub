@@ -2,11 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Typography,Card,CardContent,CardMedia } from '@mui/material'
 import { CheckCircle } from '@mui/icons-material'
+import { useGlobalContext } from '../state/GlobalContext'
 import {demoVideoUrl,demoVideoTitle,demoChannelUrl,demoChannelTitle} from '../utlis/constants'
-const VideoCard = ({video:{id:{
-    videoId
-}, snippet}}) => {
-    console.log(videoId,snippet)
+const VideoCard = ({video}) => {
+    const videoData = video;
+    const id = video.id;
+    const videoId = id.videoId;
+    const snippet = video.snippet
+    // console.log(videoId,snippet)
+    const {dispatch} = useGlobalContext();
   return (
     <Card sx={{width:{  xs:'100%',sm:'331px', md:'260px'},boxShadow:'none', borderRadius:'0'}}>
         <Link to={videoId ?`/video/${videoId}` : demoVideoUrl  }>
@@ -44,6 +48,13 @@ const VideoCard = ({video:{id:{
             color:'white',
             borderRadius:'4px',
             cursor:'pointer'
+        }} onClick={()=>{
+                dispatch({
+                    type:'ADD_TO_LIKE',
+                    payload:{
+                        data:videoData
+                    }
+                })
         }}>Like</button>
         <button className='btn' style={{
             padding:'5px',

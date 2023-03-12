@@ -7,7 +7,7 @@ import { useState } from "react"
 const Navbar = () => {
     const [darkMode,setDarkMode] = useState(false)
     const {state,dispatch} = useGlobalContext();
-    console.log(state)
+    // console.log(state)
     return (
         <Stack direction="row" alignItems="center" p={2} sx={{
             position: 'sticky',

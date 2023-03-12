@@ -58,9 +58,9 @@ a {
   background: transparent;
   outline: none;
   border: none;
-width:fit-content;
+  width:fit-content;
   padding: 7px 15px;
-  margin: 10px 0px;
+  margin: 10px 5px;
   border-radius: 20px;
   transition: all 0.3s ease;
 }

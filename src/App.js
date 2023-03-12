@@ -3,6 +3,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import {Box} from '@mui/material';
 import { Navbar,Feed,ChannelDetail,SearchFeed,VideoDetail } from './pages';
 import { useGlobalContext } from './state/GlobalContext';
+import LikedVideos from './pages/LikedVideos';
 const App = () => {
   const {state} = useGlobalContext();
   const darkmode = state.isDarkModeOn;
@@ -16,6 +17,7 @@ const App = () => {
   <Route path="/video/:id" element={<VideoDetail />} />
   <Route path="/channel/:id" element={<ChannelDetail />} />
   <Route path="/search/:searchTerm" element={<SearchFeed />} />
+  <Route path="/likedvideos" element={<LikedVideos />} />
 </Routes>
   </Box>
     </BrowserRouter>
