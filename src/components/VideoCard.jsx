@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Typography,Card,CardContent,CardMedia } from '@mui/material'
 import { CheckCircle } from '@mui/icons-material'
 import { useGlobalContext } from '../state/GlobalContext'
 import {demoVideoUrl,demoVideoTitle,demoChannelUrl,demoChannelTitle} from '../utlis/constants'
-const VideoCard = ({video}) => {
+const VideoCard = ({video,disliked}) => {
+    const [liked,setLiked] = useState(false)
+    const isDisliked = disliked;
     const videoData = video;
     const id = video.id;
     const videoId = id.videoId;
@@ -42,20 +44,32 @@ const VideoCard = ({video}) => {
             padding:'5px',
             paddingRight:'15px',
             marginRight:'10px',
-            border:'1px solid #FC1503',
+            border:'none',
             background:'none',
             textAlign:'center',
             color:'white',
             borderRadius:'4px',
             cursor:'pointer'
-        }} onClick={()=>{
-                dispatch({
-                    type:'ADD_TO_LIKE',
-                    payload:{
-                        data:videoData
-                    }
-                })
-        }}>Like</button>
+        }} >{ isDisliked ? <i class="fa-sharp fa-regular fa-thumbs-down" onClick={()=>{
+            dispatch({
+                type:'REMOVE_FROM_LIKE',
+                payload:{
+                    data:videoData
+                }
+            })
+            setLiked(!liked)
+    }}></i> :  <i style={{
+            fontSize:'1.2rem',
+            color:liked ? 'red' : 'white'
+        }} class="fa-solid fa-thumbs-up" onClick={()=>{
+            dispatch({
+                type:'ADD_TO_LIKE',
+                payload:{
+                    data:videoData
+                }
+            })
+            setLiked(!liked)
+    }}></i>}</button>
         <button className='btn' style={{
             padding:'5px',
             paddingRight:'15px',

@@ -25,7 +25,9 @@ import { useNavigate } from 'react-router-dom';
       mr:{sm:5}
     }} >
 
-      <input className="search-bar" placeholder='Search...' 
+      <input  style={{
+        background:'transparent'
+      }} className="search-bar" placeholder='Search...' 
       value={searchTerm}
       onChange={(event)=>{setSearchTerm(event.target.value)}}
       // onKeyDown={(event)=> console.log(event)}

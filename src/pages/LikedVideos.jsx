@@ -17,7 +17,7 @@ const LikedVideos = () => {
     {likedVideos.map((item,idx)=>{
 return(
     <Box key={idx}>
-      {item.id.videoId && <VideoCard video={item} />}
+      {item.id.videoId && <VideoCard video={item} disliked/>}
       {item.id.channelId && <ChannelCard channelDetail={item} />}
   </Box>
 )

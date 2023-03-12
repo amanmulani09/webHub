@@ -11,7 +11,8 @@ const Navbar = () => {
     return (
         <Stack direction="row" alignItems="center" p={2} sx={{
             position: 'sticky',
-            background: state.isDarkModeOn ? 'black' : '#fff', top: 0, justifyContent: 'space-between'
+            background: state.isDarkModeOn ? 'black' : '#fff', top: 0, justifyContent: 'space-between',
+           borderBottom:'1px dotted #FC1503'
         }}>
         <Link to="/" style={{display:'flex',alignItems:'center'}}>
             <img src={logo} alt="Home Play Logo" height={45}/>

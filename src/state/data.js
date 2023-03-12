@@ -4,6 +4,7 @@ const initialState = {
     allVideos:[],
     likedVideos:[],
     watchLater:[],
+    history:[],
     playLists:[]
 }
 export default initialState;

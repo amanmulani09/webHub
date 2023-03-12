@@ -17,7 +17,7 @@ const [videos,setVideos] = useState([])
   return (
     
     <Stack sx={{flexDirection:{sx: "column",md:"row"}, display:'block'}} >
-      <Box sx={{height:{sx:'auto',md:'9vh' },marginLeft:'150px',width:'90%',borderRight:'1px solid #3d3d3d', px:{sx:0, md:2}, display:'block'}}>
+      <Box sx={{height:{sx:'auto',md:'9vh' }, borderLeft:'1px dotted #FC1503',marginLeft:'210px',width:'90%',borderRight:'1px solid #3d3d3d', px:{sx:0, md:2}, display:'block'}}>
       <Sidebar 
       selectedCategory={selectedCategory}
       setSelectedCategory={setSelectedCategory}
