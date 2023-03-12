@@ -1,6 +1,5 @@
 
 const initialState = {
-    isDarkModeOn: true,
     allVideos:[],
     likedVideos:[],
     watchLater:[],
