@@ -3,15 +3,15 @@ import {Stack,Box} from '@mui/material'
 import ChannelCard from '../components/ChannelCard'
 import VideoCard from '../components/VideoCard'
 import { useGlobalContext } from '../state/GlobalContext'
-const LikedVideos = () => {
+const WatchLater = () => {
     const {state,dispatch} = useGlobalContext();
-    const {likedVideos} = state
+    const {watchLater} = state
 
-  console.log(likedVideos)
-  if(!likedVideos) return 'Loading....'
+  console.log(watchLater)
+  if(!watchLater) return 'Loading....'
   return (
     <>
-    <h2 style={{color:'white', margin:'15px'}}>Liked Videos</h2>
+    <h2 style={{color:'white', margin:'15px'}}>Watch Later videos:</h2>
     <button style={{
       color:'white',
       position:'absolute',
@@ -25,7 +25,7 @@ const LikedVideos = () => {
       cursor:'pointer',
       top:'120px'
     }} onClick={()=> dispatch({
-      type:'CLEAR_LIKED_VIDEOS'
+      type:'CLEAR_WATCH_LATER'
     })}>Clear All</button>
     <Stack
     direction={'row'}
@@ -33,7 +33,7 @@ const LikedVideos = () => {
      justifyContent="start" gap={2}
      sx={{marginLeft:'30px'}}
      > 
-    {likedVideos.map((item,idx)=>{
+    {watchLater.map((item,idx)=>{
 return(
     <Box key={idx}>
       {item.id.videoId && <VideoCard video={item} disliked/>}
@@ -46,4 +46,4 @@ return(
   )
 }
 
-export default LikedVideos
+export default WatchLater

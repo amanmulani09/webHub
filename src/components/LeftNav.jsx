@@ -25,7 +25,7 @@ const LeftNav = () => {
           >
                 <span style={{
                     opacity: true ? '1' : '0.7'
-                }}>Watch Later ⏲️</span>
+                }}><Link to="/watchlater"> Watch Later ⏲️</Link></span>
             </button>
       
         <button className='category-btn' style={{
@@ -34,7 +34,7 @@ const LeftNav = () => {
           >
                 <span style={{
                     opacity: true ? '1' : '0.8'
-                }}>History</span>
+                }}><Link to="history">History</Link> </span>
             </button>
         <button className='category-btn' style={{
                 background: true&& '#FC1503',color:'white', marginRight:'20px'
