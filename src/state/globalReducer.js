@@ -3,7 +3,7 @@ const globalReducer = function(state = initialState, action){
 
     switch(action.type){
         case 'CHANGE_THEME':
-            return {...state,isDarkModeOn: action.payload}
+        return {...state,isDarkModeOn: action.payload}
         case 'ADD_TO_LIKE':
         return {...state,likedVideos :[...state.likedVideos,action.payload.data] }
         case 'ADD_TO_WATCHLIST':

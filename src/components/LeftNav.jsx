@@ -8,6 +8,9 @@ const leftNavStyle = {
     marginTop:'30px',
     marginLeft:'10px'
 }
+const navlinksStyle = {
+    color:'white'
+}
 const LeftNav = () => {
   return (
     <div style={leftNavStyle} >
@@ -17,7 +20,7 @@ const LeftNav = () => {
           >
                 <span style={{
                     opacity: true ? '1' : '0.8'
-                }}> <Link to="/likedvideos">Liked Videos 👍</Link> </span>
+                }}> <Link to="/likedvideos" style={navlinksStyle}>Liked Videos 👍</Link> </span>
             </button>
         <button className='category-btn' style={{
                 background: true&& '#FC1503',color:'white', marginRight:'20px'
@@ -25,7 +28,7 @@ const LeftNav = () => {
           >
                 <span style={{
                     opacity: true ? '1' : '0.7'
-                }}><Link to="/watchlater"> Watch Later ⏲️</Link></span>
+                }}><Link to="/watchlater" style={navlinksStyle}> Watch Later ⏲️</Link></span>
             </button>
       
         <button className='category-btn' style={{
@@ -34,7 +37,7 @@ const LeftNav = () => {
           >
                 <span style={{
                     opacity: true ? '1' : '0.8'
-                }}><Link to="history">History</Link> </span>
+                }}><Link to="history" style={navlinksStyle}>History</Link> </span>
             </button>
         <button className='category-btn' style={{
                 background: true&& '#FC1503',color:'white', marginRight:'20px'
