@@ -170,15 +170,35 @@ text-align: center;
   font-size: 1rem;
   border-radius: 7px;
   cursor: pointer;
+  margin-top:10px;
 }
 
-.signInForm input{
+.signInForm button:last-child{
+  margin-left: 30%;
+}
+/* .signInForm input{
   border: none;
   border-bottom: 1px dotted #FC1503;
-}
+} */
 
 .signInForm button:hover{
   color: white;
   background-color: #FC1503;
 
+}
+
+.signInForm input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: white;
+  background:none;
+  color: #f3fef3;
+}
+.signInForm input:focus {
+  border-color: #FC1503;
+  outline: 1px dotted #000
+}
+
+.signInEmail input{
+  margin-left: 22px;
 }

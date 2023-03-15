@@ -1,11 +1,12 @@
 import React from 'react'
 import '../index.css'
+import {Link} from 'react-router-dom'
 const SignIn = () => {
  
   return (
     <div  className="signInContainer">
       <div className="signTypography">
-      <h2>Bored Enough by seeing the unwanted Ads on learning platforms? Try <span style={{color:'red',fontSize:'3.5rem'}}>WebHub!</span>
+      <h2>Bored Enough by watching the unwanted Ads on learning platforms? Try <span style={{color:'red',fontSize:'3.5rem'}}>WebHub!</span>
       
       </h2>
       <span>A free video tutorial learning webApp</span>
@@ -26,8 +27,19 @@ const SignIn = () => {
       <input type="email" name="password" />
 
      </div>
-    <button>Login</button>
-   
+     <button>Login</button>
+     <button style={{
+      marginLeft:'35%'
+     }}>Guest Login</button>
+     <div> 
+   <span>Don't have an account <Link to="signup" style={{
+    color:'#FC1503',
+    fontSize:'1.2rem',
+    marginLeft:'5px',
+    textDecoration:'underline'
+   }}> create one </Link></span>
+
+     </div>
       </form>
       </div>
     </div>
