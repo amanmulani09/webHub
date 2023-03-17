@@ -13,7 +13,6 @@ const LikedVideos = () => {
     <>
     <h2 style={{color:'white', margin:'15px'}}>Liked Videos</h2>
     <button style={{
-      color:'white',
       position:'absolute',
       right:'4%',
       padding:'5px',
