@@ -1,8 +1,9 @@
-import React from 'react'
+import {useState} from 'react'
 import '../index.css'
 import {Link} from 'react-router-dom'
 const SignIn = () => {
- 
+  const [email,setEmail] = useState('')
+  const [password,setPassword] = useState('')
   return (
     <div  className="signInContainer">
       <div className="signTypography">
@@ -12,7 +13,7 @@ const SignIn = () => {
       <span>A free video tutorial learning webApp</span>
       </div>
       <div className="signInFormContainer">
-        <h3>Login:</h3>
+        <h3>Login</h3>
       <form action="" className="signInForm">
       <div className='signInEmail'>
       <label htmlFor='email' name="email">
@@ -32,7 +33,7 @@ const SignIn = () => {
       marginLeft:'35%'
      }}>Guest Login</button>
      <div> 
-   <span>Don't have an account <Link to="signup" style={{
+   <span>Don't have an account? <Link to="/signup" style={{
     color:'#FC1503',
     fontSize:'1.2rem',
     marginLeft:'5px',

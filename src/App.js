@@ -18,8 +18,8 @@ const App = () => {
     <Navbar />
 <Routes>
   <Route path="/" exact element={<SignIn />} />
+  <Route path="/signin" exact element={<SignIn />} />
   <Route path="/signup" exact element={<SignUp />} />
-  
   <Route path="/feed" exact element={<Feed />} />
   <Route path="/video/:id" element={<VideoDetail />} />
   <Route path="/channel/:id" element={<ChannelDetail />} />
