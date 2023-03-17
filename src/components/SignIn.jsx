@@ -1,9 +1,7 @@
-import {useState} from 'react'
 import '../index.css'
 import {Link} from 'react-router-dom'
 const SignIn = () => {
-  const [email,setEmail] = useState('')
-  const [password,setPassword] = useState('')
+ 
   return (
     <div  className="signInContainer">
       <div className="signTypography">
