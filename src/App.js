@@ -11,6 +11,7 @@ import SignUp from './components/SignUp';
 import Authentication from './utlis/Authentication';
 import { useAuth } from './context/authContext';
 import UserProfile from './pages/Profile';
+import Playlist from './pages/Playlist';
 const App = () => {
   const {state} = useGlobalContext();
   const darkmode = state.isDarkModeOn;
@@ -43,6 +44,7 @@ const App = () => {
   <Route path="/likedvideos" element={<LikedVideos />} />
   <Route path="/watchlater" element={<WatchLater />} />
   <Route path="/history" element={<WatchHistory />} />
+  <Route path="/playlist" element={<Playlist />} />
 </Routes>
   </Box>
     </BrowserRouter>

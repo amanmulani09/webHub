@@ -304,3 +304,42 @@ text-align: center;
 .signUpEmail input{
   margin-left: 22px;
 }
+
+
+.navigatorCard{
+  width: 270px;
+  height: 200px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 15px;
+}
+
+.navigatorCard img{
+  width: 100%;
+  filter: blur(50%);
+  height: 100%;
+  filter: brightness(40%);
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.navigatorCard img:hover{
+  filter: blur(10%);
+  filter: brightness(20%);
+}
+.navigatorCard span{
+  position: absolute;
+  top:40%;
+  color:white;
+  font-size: 2rem;
+  z-index: 4;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 5%;
+  /* left: 50%; */
+  /* transform: translate(-50%,-50); */
+}
+
+ 
