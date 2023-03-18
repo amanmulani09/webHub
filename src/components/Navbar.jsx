@@ -49,7 +49,7 @@ const Navbar = () => {
             background:'none',
             borderRadius:'50%',
             fontSize:'1.5rem'
-        }}>{userName}</button>
+        }}>{userName && userName}</button>
         </Stack>
     )
 }
