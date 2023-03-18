@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Typography,Card,CardContent,CardMedia } from '@mui/material'
 import { CheckCircle } from '@mui/icons-material'
-import { useGlobalContext } from '../state/GlobalContext'
+import { useGlobalContext } from '../context/GlobalContext'
 import {demoVideoUrl,demoVideoTitle,demoChannelUrl,demoChannelTitle} from '../utlis/constants'
 const VideoCard = ({video,disliked}) => {
     const [liked,setLiked] = useState(false)

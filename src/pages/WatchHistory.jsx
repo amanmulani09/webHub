@@ -2,7 +2,7 @@ import React from 'react'
 import {Stack,Box} from '@mui/material'
 import ChannelCard from '../components/ChannelCard'
 import VideoCard from '../components/VideoCard'
-import { useGlobalContext } from '../state/GlobalContext'
+import { useGlobalContext } from '../context/GlobalContext'
 const WatchHistory = () => {
     const {state,dispatch} = useGlobalContext();
     const {history} = state
@@ -13,7 +13,6 @@ const WatchHistory = () => {
     <>
     <h2 style={{color:'white', margin:'15px'}}>Watched videos:</h2>
     <button style={{
-      color:'white',
       position:'absolute',
       right:'4%',
       padding:'5px',

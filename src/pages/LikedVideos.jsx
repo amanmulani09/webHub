@@ -2,7 +2,7 @@ import React from 'react'
 import {Stack,Box} from '@mui/material'
 import ChannelCard from '../components/ChannelCard'
 import VideoCard from '../components/VideoCard'
-import { useGlobalContext } from '../state/GlobalContext'
+import { useGlobalContext } from '../context/GlobalContext'
 const LikedVideos = () => {
     const {state,dispatch} = useGlobalContext();
     const {likedVideos} = state

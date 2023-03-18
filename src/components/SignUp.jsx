@@ -1,7 +1,41 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React,{useState,useRef} from 'react'
+import { Link,useNavigate } from 'react-router-dom'
 import '../index.css'
+import { useAuth } from '../context/authContext'
 const SignUp = () => {
+  const [passwordVisibility,setPasswordVisibilty] = useState(true)
+  const signUpEmailRef = useRef(null);
+  const signUpPasswordRef = useRef(null)
+  const {createUser,login} = useAuth();
+  const navigate = useNavigate();
+  const guestLogin = 'guest@gmail.com';
+  const guestPassword = 'guestPassword@gmail.com'
+  const  handleSignUp =  async(event)=> {
+    event.preventDefault();
+    let email = signUpEmailRef.current.value;
+    let password = signUpPasswordRef.current.value;
+    try{
+      await createUser(email,password)
+      navigate('/feed')
+
+    }catch(error){
+        console.log(error)
+    }
+    // console.log('email and pass', email,password)
+  }
+  
+  const handleGuestLogin= async(event)=>{
+    event.preventDefault();
+
+    try{
+      await login(guestLogin,guestPassword);
+      navigate('/feed')
+    }
+    catch(error){
+
+    }
+  }
+ 
  
   return (
     <div  className="signUpContainer">
@@ -18,20 +52,26 @@ const SignUp = () => {
       <label htmlFor='email' name="email">
         Email : 
       </label>
-      <input type="email" name="email" />
+      <input type="email" name="email" ref={signUpEmailRef} />
       </div>
      <div className="signUpPassword">
-     <label htmlFor='password' name="password">
+     <label htmlFor='password' name="password" >
         Password : 
       </label>
-      <input type="email" name="password" />
+      <input type={passwordVisibility ? 'password': 'text'} name="password" ref={signUpPasswordRef} />
+
 
      </div>
+     <div>
+
+<label htmlFor='showPassword' name='password'> Show password:</label> 
+<input  type="checkbox" name="password" className='password' onChange={()=> setPasswordVisibilty(!passwordVisibility)}/>
+</div>
      <button
      style={{
        marginLeft:'38%'
-      }}>create account</button>
-      <button>Guest Login</button>
+      }} onClick={(event)=> handleSignUp(event)}>create account</button>
+      <button onClick={(event)=> handleGuestLogin(event)}>Guest Login</button>
      <div>
 
      <span>Already have an account ?  <Link to="/signin" style={{

@@ -2,11 +2,15 @@ import { Stack } from "@mui/material"
 import { Link } from "react-router-dom"
 import { logo } from "../utlis/constants"
 import {SearchBar} from '../pages/index'
-import { useGlobalContext } from "../state/GlobalContext"
+import { useGlobalContext } from "../context/GlobalContext"
 import { useState } from "react"
+import { useAuth } from "../context/authContext"
 const Navbar = () => {
     const [darkMode,setDarkMode] = useState(false)
     const {state,dispatch} = useGlobalContext();
+    const {user} = useAuth();
+    const userName = user?.email[0].toUpperCase();
+    console.log(userName)
     // console.log(state)
     return (
         <Stack direction="row" alignItems="center" p={2} sx={{
@@ -37,6 +41,15 @@ const Navbar = () => {
         
              </button>
         <SearchBar />
+        <button style={{
+            border:'1px dotted white',
+            color:'#FC1503',
+            position:'absolute',
+            right:'1%',
+            background:'none',
+            borderRadius:'50%',
+            fontSize:'1.5rem'
+        }}>{userName}</button>
         </Stack>
     )
 }
