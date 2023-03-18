@@ -9,7 +9,7 @@ const Navbar = () => {
     const [darkMode,setDarkMode] = useState(false)
     const {state,dispatch} = useGlobalContext();
     const {user} = useAuth();
-    const userName = user?.email[0].toUpperCase();
+    const userName = user?.email;
     console.log(userName)
     // console.log(state)
     return (
@@ -41,15 +41,23 @@ const Navbar = () => {
         
              </button>
         <SearchBar />
-        <button style={{
-            border:'1px dotted white',
-            color:'#FC1503',
-            position:'absolute',
-            right:'1%',
-            background:'none',
-            borderRadius:'50%',
-            fontSize:'1.5rem'
-        }}>{userName && userName}</button>
+
+        {
+            userName && 
+            <button style={{
+                border:'1px dotted white',
+                color:'#FC1503',
+                position:'absolute',
+                right:'1%',
+                background:'none',
+                borderRadius:'50%',
+                fontSize:'1.5rem'
+            }}> <Link to="/profile" style={{
+                color:'#FC1503',
+                textDecoration:'none'
+            }}>{ userName[0].toUpperCase()}</Link></button>
+        }
+ 
         </Stack>
     )
 }

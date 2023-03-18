@@ -1,14 +1,14 @@
-import React from 'react'
+import { Navigate,useLocation } from 'react-router-dom';
 import { useAuth } from '../context/authContext'
 
-const Authentication = () => {
-    const {user} = useAuth();
-    console.log(auth)
-  return (
-    <div>
 
-    </div>
-  )
+
+const Authentication = ({children}) => {
+    const {user} = useAuth();
+    const location = useLocation();
+   return user ? children : (
+    <Navigate replace to="/signup" state={{from:location}} />
+   )
 }
 
 export default Authentication
