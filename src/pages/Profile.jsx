@@ -71,7 +71,7 @@ const UserProfile = () => {
                         <Link to="/likedvideos" >
                              <div className="navigatorCard">
                             <span>Liked Videos</span>
-                            <img src={likedvideosPng} loading="lazy" />
+                            <img src={likedvideosPng} loading="lazy" alt="liked videos" />
                             </div>
                         </Link>
 
@@ -79,7 +79,7 @@ const UserProfile = () => {
                             <div className="navigatorCard">
                                 <span>history
                                 </span>
-                                <img src={historyPng} loading="lazy" />
+                                <img src={historyPng} loading="lazy" alt="history" />
                             </div>
                         </Link>
 
@@ -88,7 +88,7 @@ const UserProfile = () => {
                                 <span>
                                     watch later
                                 </span>
-                                <img src={watchlaterPng} loading="lazy" />
+                                <img src={watchlaterPng} loading="lazy" alt="watch later" />
                             </div>
                         </Link>
 
@@ -97,7 +97,7 @@ const UserProfile = () => {
                                 <span>
                                     playlists
                                 </span>
-                                <img src={playlistPng} loading="lazy" />
+                                <img src={playlistPng} loading="lazy" alt="playlist" />
                             </div>
                         </Link>
                     </div>
